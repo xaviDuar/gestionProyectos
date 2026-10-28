@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="360.0" minWidth="440.0" prefHeight="380.0" prefWidth="460.0" spacing="16.0" styleClass="modal-pane" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sigep.controller.PracticaFichaViewController">
+   <children>
+      <!-- Cabecera de la Ficha Modal -->
+      <VBox spacing="4.0" styleClass="modal-header-container">
+         <children>
+            <Label styleClass="view-badge" text="PracticaFichaView.fxml">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblSubtitulo" styleClass="form-subtitle" text="Recibe: Practica de L. Gómez">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      
+      <!-- Campos de Formulario -->
+      <VBox spacing="12.0">
+         <children>
+            <VBox spacing="4.0">
+               <children>
+                  <Label styleClass="form-label" text="Alumno" />
+                  <TextField fx:id="txtAlumno" promptText="Nombre del alumno" styleClass="text-field-custom" text="L. Gómez" />
+               </children>
+            </VBox>
+            
+            <VBox spacing="4.0">
+               <children>
+                  <Label styleClass="form-label" text="Organización" />
+                  <TextField fx:id="txtOrganizacion" promptText="Institución o empresa" styleClass="text-field-custom" text="Hospital PIO" />
+               </children>
+            </VBox>
+            
+            <VBox spacing="4.0">
+               <children>
+                  <Label styleClass="form-label" text="Estado" />
+                  <TextField fx:id="txtEstado" promptText="Estado de la práctica" styleClass="text-field-custom" text="EN_CURSO" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      
+      <!-- Botonera de Acciones -->
+      <HBox alignment="CENTER_LEFT" spacing="12.0">
+         <children>
+            <Button fx:id="btnCargarHoras" mnemonicParsing="false" onAction="#onCargarHoras" styleClass="btn-primary" text="Cargar horas">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEvaluacion" mnemonicParsing="false" onAction="#onEvaluacion" styleClass="btn-navy" text="Evaluación">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCerrar" mnemonicParsing="false" onAction="#onCerrar" styleClass="btn-secondary" text="Cerrar">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets top="8.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="24.0" left="24.0" right="24.0" top="20.0" />
+   </padding>
+</VBox>
